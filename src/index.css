@@ -3,4 +3,53 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  background: #171717;
+  background-image: url(/public/hero.webp);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right 100%;
+  gap: 20px;
+  padding-top: 200px;
+  padding-bottom: 80px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.flatpickr-calendar {
+  background: #fff !important;
+  border-radius: 10px;
+  color: black !important;
+}
+
+
+.flatpickr-day.selected.startRange,
+.flatpickr-day.startRange.startRange,
+.flatpickr-day.endRange.startRange {
+  background-color: #262626;
+  border: none;
+}
+
+.flatpickr-day.selected.endRange,
+.flatpickr-day.startRange.endRange,
+.flatpickr-day.endRange.endRange {
+  background-color: #262626;
+  border: none;
+}
+.flatpickr-day.selected.startRange,
+.flatpickr-day.startRange.startRange,
+.flatpickr-day.endRange.startRange:hover {
+  background-color: #262626 !important;
+}
+
+.flatpickr-day.selected.endRange,
+.flatpickr-day.startRange.endRange,
+.flatpickr-day.endRange.endRange:hover {
+  background-color: #262626 !important;
 }
