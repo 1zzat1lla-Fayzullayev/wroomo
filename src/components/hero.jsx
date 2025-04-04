@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import Wrapper from "../layout/wrapper";
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
+import { Russian } from "flatpickr/dist/l10n/ru.js";
+
 
 function Hero() {
   const calendarRef = useRef();
@@ -13,6 +15,9 @@ function Hero() {
         dateFormat: "Y-m-d",
         rangeSeparator: " — ",
         position: "below",
+        locale: {
+          rangeSeparator: " — ",
+        },
       });
     }
   }, []);
@@ -69,7 +74,7 @@ function Hero() {
                     ref={calendarRef}
                     type="text"
                     placeholder="Выберите даты"
-                    className="flex items-center h-[48px] gap-[4px] overflow-hidden p-[12px] rounded-[8px] border border-[#e5e5e5] bg-inherit text-[#171717] w-full"
+                    className="flex items-center h-[48px] gap-[4px] overflow-hidden p-[12px] rounded-[8px] border border-[#e5e5e5] bg-inherit text-[#171717] w-full outline-none"
                   />
                   <img
                     src="/filter_date_logo.svg"
