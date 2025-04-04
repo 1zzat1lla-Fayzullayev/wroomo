@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Wrapper from "../layout/wrapper";
 import flatpickr from "flatpickr";
-import "flatpickr/dist/flatpickr.min.css"; 
-
-
+import "flatpickr/dist/flatpickr.min.css";
 
 function Hero() {
   const calendarRef = useRef();
@@ -14,8 +12,7 @@ function Hero() {
         mode: "range",
         dateFormat: "Y-m-d",
         rangeSeparator: " — ",
-        position: "below"
-
+        position: "below",
       });
     }
   }, []);
@@ -24,16 +21,16 @@ function Hero() {
       <div className="hero">
         <Wrapper>
           <div className="flex flex-col text-white">
-            <h2 className="text-[40px] leading-[48px] font-bold">
+            <h2 className="text-[29px] leading-[40px] md:text-[40px] md:leading-[48px] font-bold">
               Арендуйте транспорт <br /> для вашего идеального отдыха
             </h2>
-            <p className=" mt-[20px]">
+            <p className=" mt-[20px] max-w-[600px]">
               Прозрачные условия, безопасные платежи и только реальный транспорт
               от проверенных прокатных компаний и частных владельцев!
             </p>
 
-            <div className="bg-white p-[20px] rounded-[8px] mt-[40px] flex items-end gap-[12px]">
-              <div className="text-black flex flex-col gap-[4px] w-full">
+            <div className="bg-white p-[20px] rounded-[8px] mt-[40px] flex flex-col lg:items-end gap-[12px] lg:flex-row">
+              <div className="text-black flex flex-col gap-[4px] flex-[0_0_auto]">
                 <span className="text-[#737373] font-[600]">
                   Вид транспорта
                 </span>
@@ -53,13 +50,13 @@ function Hero() {
                 <span className="text-[#737373] font-[600]">Место</span>
                 <div className="flex items-center h-[48px] gap-[4px] overflow-hidden p-[12px] rounded-[8px] border border-[#e5e5e5] bg-inherit text-[#171717]  w-full opacity-[.5]">
                   <input
-                    disabled=""
+                    disabled
                     type="text"
                     placeholder=""
                     aria-label=""
-                    maxlength="128"
+                    maxLength="128"
                     value="Phuket, Thailand"
-                    className="outline-none border-none w-full"
+                    className="outline-none border-none w-full select-none"
                   />
                   <img src="/filter_location_logo.svg" />
                 </div>
@@ -67,15 +64,21 @@ function Hero() {
 
               <div className="flex flex-col gap-[4px] w-full">
                 <span className="text-[#737373] font-[600]">Период</span>
-                <input
-                  ref={calendarRef}
-                  type="text"
-                  placeholder="Выберите даты"
-                  className="flex items-center h-[48px] gap-[4px] overflow-hidden p-[12px] rounded-[8px] border border-[#e5e5e5] bg-inherit text-[#171717] w-full"
-                />
+                <div className="flex items-center h-[48px] overflow-hidden  rounded-[8px] bg-inherit text-[#171717] relative  w-full opacity-[.5]">
+                  <input
+                    ref={calendarRef}
+                    type="text"
+                    placeholder="Выберите даты"
+                    className="flex items-center h-[48px] gap-[4px] overflow-hidden p-[12px] rounded-[8px] border border-[#e5e5e5] bg-inherit text-[#171717] w-full"
+                  />
+                  <img
+                    src="/filter_date_logo.svg"
+                    className="absolute right-[15px]"
+                  />
+                </div>
               </div>
 
-              <button className="px-[24px] py-[12px] text-[16px] font-[600] bg-[#f04438] rounded-[8px] whitespace-nowrap">
+              <button className="px-[24px] py-[12px] text-[16px] font-[600] bg-[#f04438] rounded-[8px] whitespace-nowrap transition-all ease-in-out hover:opacity-[.8] cursor-pointer">
                 Поиск
               </button>
             </div>
