@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Wrapper from "../layout/wrapper";
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import { Russian } from "flatpickr/dist/l10n/ru.js";
 
-
 function Hero() {
   const calendarRef = useRef();
+  const [isDateSelected, setIsDateSelected] = useState(false);
 
   useEffect(() => {
     if (calendarRef.current) {
@@ -17,6 +17,13 @@ function Hero() {
         position: "below",
         locale: {
           rangeSeparator: " — ",
+        },
+        onChange: function (selectedDates) {
+          if (selectedDates.length > 0) {
+            setIsDateSelected(true);
+          } else {
+            setIsDateSelected(false);
+          }
         },
       });
     }
@@ -69,7 +76,11 @@ function Hero() {
 
               <div className="flex flex-col gap-[4px] w-full">
                 <span className="text-[#737373] font-[600]">Период</span>
-                <div className="flex items-center h-[48px] overflow-hidden  rounded-[8px] bg-inherit text-[#171717] relative  w-full opacity-[.5]">
+                <div
+                  className={`flex items-center h-[48px] overflow-hidden rounded-[8px] bg-inherit text-[#171717] relative w-full ${
+                    isDateSelected ? "" : "opacity-[.5]"
+                  }`}
+                >
                   <input
                     ref={calendarRef}
                     type="text"
