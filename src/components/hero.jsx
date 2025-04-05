@@ -33,13 +33,13 @@ function Hero() {
       <div className="hero">
         <Wrapper>
           <div className="flex flex-col text-white">
-            <h2 className="text-[29px] leading-[40px] md:text-[40px] md:leading-[48px] font-bold">
+            {/* <h2 className="text-[29px] leading-[40px] md:text-[40px] md:leading-[48px] font-bold">
               Арендуйте транспорт <br /> для вашего идеального отдыха
             </h2>
             <p className=" mt-[20px] max-w-[600px]">
               Прозрачные условия, безопасные платежи и только реальный транспорт
               от проверенных прокатных компаний и частных владельцев!
-            </p>
+            </p> */}
 
             <div className="bg-white p-[20px] rounded-[8px] mt-[40px] flex flex-col lg:items-end gap-[12px] lg:flex-row">
               <div className="text-black flex flex-col gap-[4px] flex-[0_0_auto]">

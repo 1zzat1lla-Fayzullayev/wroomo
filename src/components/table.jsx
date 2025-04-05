@@ -1,8 +1,15 @@
 import React from 'react'
+import Wrapper from '../layout/wrapper'
+import TokenTable from './ui/tableUI'
 
 const Table = () => {
   return (
-    <div>Table started</div>
+    <div>
+        
+        <Wrapper>
+          <TokenTable/>
+        </Wrapper>
+    </div>
   )
 }
 

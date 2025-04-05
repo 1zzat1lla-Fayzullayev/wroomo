@@ -50,8 +50,8 @@ function Navbar() {
                 {isLoggedIn ? (
                   <div className="flex gap-3 items-center">
                     <select className="outline-none hidden lg:block border border-[#262626] rounded-[5px] py-[8px] px-2 appearance-none cursor-pointer">
-                      <option value="ru">RU</option>
-                      <option value="en">EN</option>
+                      <option value="ru" className="text-black">RU</option>
+                      <option value="en" className="text-black">EN</option>
                     </select>
                     <div className="min-h-[100%] w-[1.5px] h-[44px] bg-[#262626] hidden lg:block"></div>
                     <button className="px-[12px] py-[8px] border border-white rounded-[5px] hidden lg:block text-[14px] cursor-pointer transition-all hover:opacity-80">
@@ -68,8 +68,8 @@ function Navbar() {
                     </button>
                     <div className="min-h-[100%] w-[1.5px] h-[44px] bg-[#262626] hidden lg:block"></div>
                     <select className="outline-none hidden lg:block border border-[#262626] rounded-[5px] py-[8px] px-2 appearance-none cursor-pointer">
-                      <option value="ru">RU</option>
-                      <option value="en">EN</option>
+                      <option value="ru" className="text-black">RU</option>
+                      <option value="en" className="text-black">EN</option>
                     </select>
                     <div
                       className="flex gap-3 px-[12px] py-[6px] cursor-pointer bg-[#262626] rounded-[5px]"
